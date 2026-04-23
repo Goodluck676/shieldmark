@@ -35,5 +35,5 @@ def generate_transactions():
     return transactions
 
 
-results = generate_transactions()
-print(results)
+# results = generate_transactions()
+# print(results)

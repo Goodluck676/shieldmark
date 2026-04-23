@@ -31,17 +31,17 @@ def process_transaction (sale):
     if "staff_name" not in sale:
         return False
     
-    if "actual_amount" not in sale:
+    if "actual" not in sale:
         return False
     
-    if "logged_amount" not in sale: 
+    if "logged" not in sale: 
         return False
     
-    actual_amount = sale["actual_amount"]
-    logged_amount = sale["logged_amount"]
+    actual = sale["actual"]
+    logged = sale["logged"]
     
     
-    discrepancy = calculate_discrepancy(actual_amount, logged_amount)
+    discrepancy = calculate_discrepancy(actual, logged)
 
     if discrepancy > 0:
         status = "Underreported"
@@ -64,13 +64,13 @@ def process_transaction (sale):
 sale1 = process_transaction({
     "staff_id" : "Emply1",
     "staff_name" : "Kay",
-    "actual_amount" : 500,
-    "logged_amount" : 300
+    "actual" : 500,
+    "logged" : 300
                          
 
 })
 
-print(sale1)
+# print(sale1)
 
 
     
