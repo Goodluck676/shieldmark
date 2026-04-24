@@ -4,7 +4,17 @@ from generate_transactions import generate_transactions
 transactions = generate_transactions()
 # print (transactions)
 
+print("====================================")
+print("   SHIELDMARK TRANSACTION REPORT")
+print("====================================")
+
 for transaction in transactions:
     result = process_transaction(transaction)
 
-    print(result)
+    
+
+    print("Employee: " + result["staff_name"] ) 
+    print("Discrepancy: $" + str(result["discrepancy"]))
+    print("Status: " + result["status"]) 
+    print("ID: " + result["staff_id"])
+    print("----------------------------------------------------")
