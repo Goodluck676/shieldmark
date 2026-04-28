@@ -1,14 +1,14 @@
 from validate_amount import process_transaction
 from generate_transactions import generate_transactions
 
-transactions = generate_transactions()
+generate_transactions()
 # print (transactions)
 
 print("====================================")
 print("   SHIELDMARK TRANSACTION REPORT")
 print("====================================")
 
-for transaction in transactions:
+for transaction in generate_transactions():
     result = process_transaction(transaction)
 
     

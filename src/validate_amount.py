@@ -40,6 +40,12 @@ def process_transaction (sale):
     actual = sale["actual"]
     logged = sale["logged"]
     
+    if not validate_amount(actual):
+        return False
+
+    if not validate_amount(logged):
+        return False
+
     
     discrepancy = calculate_discrepancy(actual, logged)
 
